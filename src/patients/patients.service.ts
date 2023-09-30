@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { v4 as uuidv4 } from 'uuid';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Patient } from './patient.entity';
 import { Repository } from 'typeorm';
