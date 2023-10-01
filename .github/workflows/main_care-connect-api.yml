@@ -12,6 +12,7 @@ on:
       - '.husky'
       - '.github/**'
       - '**/*.csv'
+      - '**/*.spec.ts'
   workflow_dispatch:
 
 jobs:
