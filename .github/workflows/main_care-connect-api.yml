@@ -33,9 +33,6 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Zip all files for upload between jobs
-        run: Compress-Archive -Path .\* -DestinationPath nest.zip
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -64,10 +61,6 @@ jobs:
           app-name: 'care-connect-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F4AFFF1AA114797835E693F02FE9C2B }}
-          package: nest.zip
-      
-      - name: Delete zip file
-        run: rm nest.zip
-
+          package: .
 
           
